@@ -5,7 +5,7 @@ export default function Nav() {
         <div className="py-4 px-8 bg-gray-700 text-white flex justify-between">
             <div className="text-xl">
                 <Link href="/">
-                    NXT API
+                    Starwars API
                 </Link>
             </div>
             <div className="flex items-center">

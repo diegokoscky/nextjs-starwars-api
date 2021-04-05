@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export async function getStaticProps(context) {
-    const res = await fetch('https://swapi.dev/api/people/');
+    const res = await fetch('https://swapi.dev/api/planets/');
     const data = await res.json();
 
     if(!data) {
@@ -15,19 +15,19 @@ export async function getStaticProps(context) {
     }
 }
 
-export default function Pessoas({ data }) {
+export default function Planetas({ data }) {
     return (
         <>
-            <h1 className="text-center text-xl font-semibold my-6">Pessoas</h1>
+            <h1 className="text-center text-xl font-semibold my-6">Planetas</h1>
             <div className="flex flex-wrap justify-center">
-                { data.results.map(people => {
-                    const urlArr = people.url.split("/");
+                { data.results.map(planetas => {
+                    const urlArr = planetas.url.split("/");
                     const id = urlArr[urlArr.length - 2];
                     
                     return (
                         <div className="mx-2 mb-2 bg-gray-700 py-2 px-4 rounded-md text-white">
-                            <Link href={ `/pessoas/${id}` }>
-                                { people.name }
+                            <Link href={ `/planetas/${id}` }>
+                                { planetas.name }
                             </Link>
                         </div>
                     )
