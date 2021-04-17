@@ -1,3 +1,5 @@
+![](https://www.diegokoscky.com.br/imgs/externos/nextjs-starwars-api.png)
+
 ## Website simples com consulta à Starwars API usando React.js, Next.js e Tailwindcss
 
 Link do projeto: [nextjs-starwars-api](https://nextjs-starwars-api.vercel.app/)
